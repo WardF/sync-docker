@@ -12,6 +12,8 @@ RUN tar -xf /tmp/sync.tgz -C /usr/bin rslsync && rm -f /tmp/sync.tgz
 
 COPY sync.conf.default /etc/
 COPY run_sync /usr/bin/
+COPY Dockerfile.x64 /
+COPY run_sync_docker_x64.sh /
 
 EXPOSE 8888
 EXPOSE 55555

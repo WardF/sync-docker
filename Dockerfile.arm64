@@ -10,13 +10,13 @@ FROM ubuntu
 MAINTAINER Resilio Inc. <support@resilio.com>
 LABEL com.resilio.version="2.7.2"
 
-ADD https://download-cdn.resilio.com/stable/linux-armhf/resilio-sync_armhf.tar.gz /tmp/sync.tgz
+ADD https://download-cdn.resilio.com/stable/linux-arm/resilio-sync_arm.tar.gz /tmp/sync.tgz
 RUN mv /tmp/sync.tgz /usr/bin/ && cd /usr/bin && tar -xvf ./sync.tgz
 
 COPY sync.conf.default /etc/
 COPY run_sync /usr/bin/
-COPY Dockerfile.pi /
-COPY run_sync_docker_pi.sh /
+COPY Dockerfile.arm64 /
+COPY run_sync_docker_arm64.sh /
 
 EXPOSE 8888
 EXPOSE 55555
