@@ -44,4 +44,4 @@ echo "[Press any key to continue]"
 read -r
 
 
-docker run --rm -h "${HNAME}" -p 8888:8888 -p 55555 -v "${TARGDIR}":/mnt/sync wardf/sync:arm
+docker run -d --rm -h "${HNAME}" -p 8888:8888 -p 55555 -v "${TARGDIR}":/mnt/sync wardf/sync:arm
