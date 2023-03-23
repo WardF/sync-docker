@@ -10,6 +10,8 @@ FROM ubuntu
 MAINTAINER Resilio Inc. <support@resilio.com>
 LABEL com.resilio.version="2.7.2"
 
+RUN apt update && apt full-upgrade -y && apt autoremove -y 
+
 ADD https://download-cdn.resilio.com/stable/linux-armhf/resilio-sync_armhf.tar.gz /tmp/sync.tgz
 RUN mv /tmp/sync.tgz /usr/bin/ && cd /usr/bin && tar -xvf ./sync.tgz
 
