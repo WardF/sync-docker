@@ -45,3 +45,4 @@ read -r
 
 
 docker run -d --rm -h "${HNAME}" -p 8888:8888 -p 55555 -v "${TARGDIR}":/mnt/sync wardf/sync:arm64
+
